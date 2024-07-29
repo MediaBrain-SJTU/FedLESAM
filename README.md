@@ -72,9 +72,9 @@ Client-level Momentum](https://arxiv.org/pdf/2106.10874.pdf)
 
 Here we provide a command to start the training of one algorithm:
 
-**CUDA_VISIBLE_DEVICES=0 python train.py --non-iid --dataset CIFAR10 --model ResNet18 --split-rule Dirichlet --split-coef 0.6 --active-ratio 0.1 --total-client 100 --batchsize 50 --rho 0.05 --method FedLESAM-S --local-epochs 5 --comm-rounds 800**
+**CUDA_VISIBLE_DEVICES=0 python train.py --non-iid --dataset CIFAR10 --model ResNet18 --split-rule Dirichlet --split-coef 0.6 --active-ratio 0.1 --total-client 100 --batchsize 50 --rho 0.5 --method FedLESAM-S --local-epochs 5 --comm-rounds 800**
 
-
+For the best results, you might need to tune the parameter of rho.  
 As for FedSMOO and FedGAMMA, the authors just make their codes open source. Please refer to the repo [FedSMOO](https://github.com/woodenchild95/FL-Simulator/tree/main), which might be more accurate for their algorithms. Notably, we try to implement our previous works FedSkip(ICDM22), FedMR(TMLR23) and FedGELA(NeurIPS23) in this repo. Feel free to use these methods for heterogeneous data in federated learning.
 
 ## Citation
